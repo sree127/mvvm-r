@@ -76,6 +76,7 @@
 		9E145EB220E3D5D000C52DCF /* MVVM_Router */ = {
 			isa = PBXGroup;
 			children = (
+				9EA947F120ED0DE900F6F565 /* Template */,
 				9E3DABE420E4CB0E005DCCFE /* Main VC */,
 				9E3DABE320E4CB0E005DCCFE /* Settings */,
 				9E145EC520E3D63A00C52DCF /* Routing */,
@@ -135,6 +136,13 @@
 				9E3DABEF20E4D545005DCCFE /* MainRouter.swift */,
 			);
 			path = "Main VC";
+			sourceTree = "<group>";
+		};
+		9EA947F120ED0DE900F6F565 /* Template */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Template;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
