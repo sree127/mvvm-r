@@ -8,11 +8,36 @@
 
 import Foundation
 
-final class SettingsViewModel {
+struct SettingsViewState {
   
+  enum AccountError {
+    case any(String)
+    case accountAlreadyConnected
+  }
+  
+  let loading: Bool
+}
+
+
+protocol SettingsModuleInput: class {
+}
+
+protocol SettingsModuleOutput: class {
+  var viewState: SettingsViewState? { get }
+  var didChangeViewState: (() -> Void)? { get set }
+}
+
+final class SettingsViewModel: SettingsModuleOutput {
+  
+  var didChangeViewState: (() -> Void)?
   var output: SettingsModuleOutput?
-  
   private let router: SettingsRouter.Routes
+  
+  var viewState: SettingsViewState? {
+    didSet {
+      didChangeViewState?()
+    }
+  }
   
   init(router: SettingsRouter.Routes) {
     self.router = router
@@ -21,6 +46,7 @@ final class SettingsViewModel {
   func closeEvent() {
     router.close()
   }
+  
 }
 
 extension SettingsViewModel: SettingsModuleInput { }

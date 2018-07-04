@@ -10,9 +10,11 @@ import Foundation
 
 final class MainRouter: Router<ViewController>, MainRouter.Routes {
   
-  typealias Routes = SettingsRoute
+  typealias Routes = SettingsRoute 
   
   var settingsTransition: Transition {
     return PushTransition()
   }
+  
+  
 }

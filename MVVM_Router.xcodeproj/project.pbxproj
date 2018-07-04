@@ -130,8 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				9E145EB520E3D5D000C52DCF /* ViewController.swift */,
-				9E3DABEB20E4D534005DCCFE /* MainModule.swift */,
 				9E3DABED20E4D53E005DCCFE /* MainViewModel.swift */,
+				9E3DABEB20E4D534005DCCFE /* MainModule.swift */,
 				9E3DABEF20E4D545005DCCFE /* MainRouter.swift */,
 			);
 			path = "Main VC";

@@ -9,12 +9,6 @@
 import Foundation
 import UIKit
 
-protocol SettingsModuleInput: class {
-}
-
-protocol SettingsModuleOutput: class {
-}
-
 final class SettingsModule {
   var input: SettingsModuleInput {
     return viewModel
