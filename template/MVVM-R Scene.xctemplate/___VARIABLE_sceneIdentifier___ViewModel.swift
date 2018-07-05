@@ -15,19 +15,22 @@ protocol ___VARIABLE_sceneIdentifier___SceneInput: class {
 }
 
 protocol ___VARIABLE_sceneIdentifier___SceneOutput: class {
-  var viewState: ___VARIABLE_sceneIdentifier___ViewState? { get }
   var didChangeViewState: (() -> ())? { get set }
 }
 
 final class ___VARIABLE_sceneIdentifier___ViewModel {
   
   var didChangeViewState: (() -> Void)?
-  var output: ___VARIABLE_sceneIdentifier___ViewState?
+  var router: ___VARIABLE_sceneIdentifier___Router?
   
   /// View State
-  var viewState: ___VARIABLE_sceneIdentifier___ViewState? {
+  private var viewState: ___VARIABLE_sceneIdentifier___ViewState? {
     didSet {
-      didChangeViewState?()
+      didChangeViewState?(viewState)
     }
+  }
+  
+  init(router: ___VARIABLE_sceneIdentifier___Router) {
+    self.router = router
   }
 }

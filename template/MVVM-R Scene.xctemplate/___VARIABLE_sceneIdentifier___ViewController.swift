@@ -9,10 +9,10 @@
 import UIKit
 
 final class ___VARIABLE_sceneIdentifier___ViewController: UIViewController {
-    var viewModel: ___VARIABLE_sceneIdentifier___ViewModel!
+  var viewModel: ___VARIABLE_sceneIdentifier___ViewModel!
+  var viewState: ___VARIABLE_sceneIdentifier___ViewState?
 
     // MARK: - View lifecycle
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }

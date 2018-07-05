@@ -11,11 +11,14 @@ import Foundation
 final class ___VARIABLE_sceneIdentifier___SceneBuilder {
   var router: ___VARIABLE_sceneIdentifier___Router
   var viewModel: ___VARIABLE_sceneIdentifier___ViewModel
+  var viewController: ___VARIABLE_sceneIdentifier___ViewController
   
   init() {
     let router = ___VARIABLE_sceneIdentifier___Router()
     self.router = router
     let viewModel = ___VARIABLE_sceneIdentifier___ViewModel(router: router)
     self.viewModel = viewModel
+    
+    /// Initialise ViewController
   }
 }
