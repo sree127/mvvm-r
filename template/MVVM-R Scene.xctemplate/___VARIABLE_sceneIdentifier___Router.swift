@@ -8,5 +8,10 @@
 
 import Foundation
 
-final class ___VARIABLE_sceneIdentifier___Router: Router<___VARIABLE_sceneIdentifier___ViewController> {
+protocol ___VARIABLE_sceneIdentifier___RouterProtocol {
+	
+}
+
+final class ___VARIABLE_sceneIdentifier___Router: Router<___VARIABLE_sceneIdentifier___ViewController>, ___VARIABLE_sceneIdentifier___RouterProtocol {
+
 }

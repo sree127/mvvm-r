@@ -8,17 +8,24 @@
 
 import Foundation
 
+/* UNCOMMENT IN CASE SCENE HAS DELEGATE FUNCTIONS
+
+protocol ___VARIABLE_sceneIdentifier___Delegate {
+
+}
+*/
+
 final class ___VARIABLE_sceneIdentifier___SceneBuilder {
-  var router: ___VARIABLE_sceneIdentifier___Router
-  var viewModel: ___VARIABLE_sceneIdentifier___ViewModel
+  // TODO:- Uncomment Below Line
   var viewController: ___VARIABLE_sceneIdentifier___ViewController
-  
-  init() {
+  // TODO:- Uncomment Above Line
+
+  init(containerProvider: SubContainerProviderProtocol/*, delegate: ___VARIABLE_sceneIdentifier___Delegate */) {
     let router = ___VARIABLE_sceneIdentifier___Router()
-    self.router = router
-    let viewModel = ___VARIABLE_sceneIdentifier___ViewModel(router: router)
-    self.viewModel = viewModel
-    
-    /// Initialise ViewController
+    let viewModel = ___VARIABLE_sceneIdentifier___ViewModel(router: router, containerProvider: containerProvider/*, delegate: ___VARIABLE_sceneIdentifier___Delegate */)
+    // TODO:- Uncomment Below Line
+    viewController = // ViewController from storyboard
+    viewController.viewModel = viewModel
+    // TODO:- Uncomment Above Line
   }
 }

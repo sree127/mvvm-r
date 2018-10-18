@@ -74,9 +74,37 @@
 			<key>Type</key>
 			<string>static</string>
 		</dict>
-				<dict>
+		<dict>
 			<key>Default</key>
 			<string>___VARIABLE_sceneIdentifier___SceneBuilder</string>
+			<key>Description</key>
+			<string>The scene builder name</string>
+			<key>Identifier</key>
+			<string>sceneBuilderName</string>
+			<key>Name</key>
+			<string>SceneBuilder Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_sceneIdentifier___ViewModelProtocols</string>
+			<key>Description</key>
+			<string>The scene builder name</string>
+			<key>Identifier</key>
+			<string>sceneBuilderName</string>
+			<key>Name</key>
+			<string>SceneBuilder Name:</string>
+			<key>Required</key>
+			<true/>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_sceneIdentifier___ViewModelDefinitions</string>
 			<key>Description</key>
 			<string>The scene builder name</string>
 			<key>Identifier</key>

@@ -1,36 +1,30 @@
 //
-//  ___FILENAME___
-//  ___PROJECTNAME___
+//  ___VARIABLE_sceneIdentifier___ViewModel.swift
+//  Stocard
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
-//  Copyright (c) ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
+//  Copyright (c) 2018 Stocard. All rights reserved.
 //
 
 import Foundation
 
-struct ___VARIABLE_sceneIdentifier___ViewState {
-}
+final class ___VARIABLE_sceneIdentifier___ViewModel: ___VARIABLE_sceneIdentifier___ViewModelProtocol {
 
-protocol ___VARIABLE_sceneIdentifier___SceneInput: class {
-}
-
-protocol ___VARIABLE_sceneIdentifier___SceneOutput: class {
-  var didChangeViewState: (() -> ())? { get set }
-}
-
-final class ___VARIABLE_sceneIdentifier___ViewModel {
-  
-  var didChangeViewState: (() -> Void)?
-  var router: ___VARIABLE_sceneIdentifier___Router?
-  
-  /// View State
-  private var viewState: ___VARIABLE_sceneIdentifier___ViewState? {
-    didSet {
-      didChangeViewState?(viewState)
-    }
+  var processedResultUpdated: ((___VARIABLE_sceneIdentifier___ViewModel.ProcessedResult) -> Void)?
+  private var router: ___VARIABLE_sceneIdentifier___RouterProtocol?
+  /*let delegate: ___VARIABLE_sceneIdentifier___Delegate */
+  private let containerProvider: SubContainerProviderProtocol?
+  private var model: ___VARIABLE_sceneIdentifier___ModelProtocol? {
+    return containerProvider?.subContainer(protocols: ___VARIABLE_sceneIdentifier___ModelContainerProtocol.self)?.model
   }
-  
-  init(router: ___VARIABLE_sceneIdentifier___Router) {
+
+  init(router: ___VARIABLE_sceneIdentifier___RouterProtocol, containerProvider: SubContainerProviderProtocol/*, delegate: ___VARIABLE_sceneIdentifier___Delegate */) {
     self.router = router
+    self.containerProvider = containerProvider
   }
+
+  func process(input: ___VARIABLE_sceneIdentifier___ViewModel.Input?) {
+    // In most cases this will trigger the didProcessOutput()
+  }
+
 }
