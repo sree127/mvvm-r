@@ -1,5 +1,5 @@
 //
-//  ___VARIABLE_sceneIdentifier___ViewModel.swift
+//  ___VARIABLE_sceneIdentifier___Interactor.swift
 //  Stocard
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
@@ -8,9 +8,9 @@
 
 import Foundation
 
-final class ___VARIABLE_sceneIdentifier___ViewModel: ___VARIABLE_sceneIdentifier___ViewModelProtocol {
+final class ___VARIABLE_sceneIdentifier___Interactor: ___VARIABLE_sceneIdentifier___InteractorProtocol {
 
-  var processedResultUpdated: ((___VARIABLE_sceneIdentifier___ViewModel.ProcessedResult) -> Void)?
+  var processedResultUpdated: ((___VARIABLE_sceneIdentifier___Interactor.ProcessedResult) -> Void)?
   private var router: ___VARIABLE_sceneIdentifier___RouterProtocol?
   /*let delegate: ___VARIABLE_sceneIdentifier___Delegate */
   private let containerProvider: SubContainerProviderProtocol?
@@ -23,7 +23,7 @@ final class ___VARIABLE_sceneIdentifier___ViewModel: ___VARIABLE_sceneIdentifier
     self.containerProvider = containerProvider
   }
 
-  func process(input: ___VARIABLE_sceneIdentifier___ViewModel.Input?) {
+  func process(input: ___VARIABLE_sceneIdentifier___Interactor.Input?) {
     // In most cases this will trigger the didProcessOutput()
   }
 
