@@ -48,13 +48,13 @@
 		</dict>
 		<dict>
 			<key>Default</key>
-			<string>___VARIABLE_sceneIdentifier___ViewModel</string>
+			<string>___VARIABLE_sceneIdentifier___Interactor</string>
 			<key>Description</key>
-			<string>The view model name</string>
+			<string>The Interactor name</string>
 			<key>Identifier</key>
-			<string>viewModelName</string>
+			<string>interactorName</string>
 			<key>Name</key>
-			<string>ViewModel Name:</string>
+			<string>Interactor Name:</string>
 			<key>Required</key>
 			<true/>
 			<key>Type</key>
