@@ -6,32 +6,27 @@
 //  Copyright (c) ___YEAR___ ___ORGANIZATIONNAME___. All rights reserved.
 //
 
-import UIKit
+import XCTest
+@testable import Stocard
 
-final class ___VARIABLE_sceneIdentifier___ViewController: UIViewController {
+class ___VARIABLE_sceneIdentifier___Tests: XCTestCase {
 
-  // MARK: Properties
-
-  var viewModel: ___VARIABLE_sceneIdentifier___ViewModelProtocol!
-  var viewModelProcessedResult: ___VARIABLE_sceneIdentifier___ViewModel.ProcessedResult? {
-    didSet { DispatchQueue.main.async { self.render(viewModelInteraction: self.viewModelProcessedResult) } }
+  private lazy var mockContainer: MockedContainerProvider = {
+    return MockedContainerProvider()
+  }()
+  
+  override func setUp() {
+    super.setUp()
+    // Put setup code here. This method is called before the invocation of each test method in the class.
   }
-
-  // MARK: IBOutlets
-
-  // MARK: - View lifecycle
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    viewModel.processedResultUpdated = { self.viewModelProcessedResult = $0 }
+  
+  override func tearDown() {
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    super.tearDown()
   }
-
-  // MARK: - Rendering
-
-  func render(viewModelInteraction: ___VARIABLE_sceneIdentifier___ViewModel.ProcessedResult?) {
-
+  
+  func testExample() {
+    // This is an example of a functional test case.
+    // Use XCTAssert and related functions to verify your tests produce the correct results.
   }
-
-  // MARK: - IBActions
-
 }
